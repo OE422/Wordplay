@@ -12,10 +12,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var uncle = UILabel()
     var goWhere = UITextField()
-    
     var noun = UITextField()
     var adjective = UITextField()
     var verb = UITextField()
+    var thirdVCButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +49,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         verb.borderStyle = .roundedRect
         verb.autocapitalizationType = .none
         view.addSubview(verb)
+        
+        thirdVCButton.setTitle("form a sentence", for: .normal)
+        thirdVCButton.frame = CGRect(x: 150, y: 400, width: 140, height: 40)
+        thirdVCButton.addTarget(self, action: #selector(switchToVC3), for: .touchUpInside)
+        view.addSubview(thirdVCButton)
+    }
+    @objc func switchToVC3 (sender: UIButton)
+    {
+        if (noun.text != "" && adjective.text != "" && verb.text != "")
+        {
+            performSegue(withIdentifier: "toThirdVC", sender: self)
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "toSecondVC")
@@ -74,13 +86,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if (textField == goWhere)
         {
             performSegue(withIdentifier: "toSecondVC", sender: self)
-        }
-        if (textField == noun || textField == adjective || textField == verb)
-        {
-            if (noun.text != "" && adjective.text != "" && verb.text != "")
-            {
-                performSegue(withIdentifier: "toThirdVC", sender: self)
-            }
         }
         return true
     }

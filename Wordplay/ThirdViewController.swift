@@ -17,7 +17,7 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sentence.text = "The \(a1!) \(n1!) \(v1!)."
+        sentence.text = "The \(n1!) is \(a1!) at \(v1!)."
         sentence.textAlignment = NSTextAlignment.center
         sentence.sizeToFit()
         sentence.frame.origin = CGPoint(x: (UIScreen.main.bounds.width/2)-((sentence.frame.maxX-sentence.frame.minX)/2), y: 180)

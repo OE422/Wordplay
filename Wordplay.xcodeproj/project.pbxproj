@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -115,7 +115,6 @@
 			);
 			mainGroup = 78D6F867234FA46C007BA907;
 			packageReferences = (
-				78C4BFCD2350F4DF00F7CA32 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 78D6F871234FA46C007BA907 /* Products */;
 			projectDirPath = "";
@@ -345,17 +344,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		78C4BFCD2350F4DF00F7CA32 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 78D6F868234FA46C007BA907 /* Project object */;
 }
